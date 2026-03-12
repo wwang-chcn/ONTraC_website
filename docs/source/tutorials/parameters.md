@@ -20,14 +20,14 @@ Options:
     --GNN-dir=GNN_DIR   Directory for the GNN output.
     --NT-dir=NT_DIR     Directory for the niche trajectory output.
     --meta-input=META_INPUT
-                        Meta data file in csv format. Each row is a cell. The first column should be the cell name with column name
+                        Metadata file in csv format. Each row is a cell. The first column should be the cell name with column name
                         Cell_ID. Coordinates (x, y) and sample should be included. Cell type is required for cell-level data.
     --preprocessing-dir=PREPROCESSING_DIR
-                        This options will be deprecated from v3.0. Please use --NN-dir instead.
+                        This option will be deprecated from v3.0. Please use --NN-dir instead.
     --NTScore-dir=NTSCORE_DIR
-                        This options will be deprecated from v3.0. Please use --NT-dir instead.
+                        This option will be deprecated from v3.0. Please use --NT-dir instead.
     -d DATASET, --dataset=DATASET
-                        This options will be deprecated from v3.0. Please use --meta-input instead.
+                        This option will be deprecated from v3.0. Please use --meta-input instead.
 
   Niche Network Construction:
     --n-cpu=N_CPU       Number of CPUs used for parallel computing in dataset preprocessing. Default is 4.
@@ -41,7 +41,7 @@ Options:
     --device=DEVICE     Device for training. We support cpu and cuda now. Auto select if not specified.
     --epochs=EPOCHS     Number of maximum epochs for training. Default is 1000.
     --patience=PATIENCE
-                        Number of epochs wait for better result. Default is 100.
+                        Number of epochs to wait for better result. Default is 100.
     --min-delta=MIN_DELTA
                         Minimum delta for better result. Should be in (0, 1). Default is 0.001
     --min-epochs=MIN_EPOCHS
@@ -63,16 +63,16 @@ Options:
                         Weight for purity loss. Default is 300.
     --regularization-loss-weight=REGULARIZATION_LOSS_WEIGHT
                         Weight for regularization loss. Default is 0.1.
-    --beta=BETA         Beta value control niche cluster assignment matrix. Default is 0.03.
+    --beta=BETA         Beta value controls the niche cluster assignment matrix. Default is 0.03.
 
   Options for niche trajectory:
     --trajectory-construct=TRAJECTORY_CONSTRUCT
                         Method to construct the niche trajectory. Default is 'BF' (brute-force).
 ```
 
-## Full parameters for ONTraC_NN
+## Full Parameters for ONTraC_NN
 
-Previouly named as createDataSet.
+Previously named `createDataSet`.
 
 ```
 Usage: ONTraC_NN <--NN-dir NN_DIR> <--meta-input META_INPUT>
@@ -87,12 +87,12 @@ Options:
   IO:
     --NN-dir=NN_DIR     Directory for niche network outputs.
     --meta-input=META_INPUT
-                        Meta data file in csv format. Each row is a cell. The first column should be the cell name with column name
+                        Metadata file in csv format. Each row is a cell. The first column should be the cell name with column name
                         Cell_ID. Coordinates (x, y) and sample should be included. Cell type is required for cell-level data.
     --preprocessing-dir=PREPROCESSING_DIR
-                        This options will be deprecated from v3.0. Please use --NN-dir instead.
+                        This option will be deprecated from v3.0. Please use --NN-dir instead.
     -d DATASET, --dataset=DATASET
-                        This options will be deprecated from v3.0. Please use --meta-input instead.
+                        This option will be deprecated from v3.0. Please use --meta-input instead.
 
   Niche Network Construction:
     --n-cpu=N_CPU       Number of CPUs used for parallel computing in dataset preprocessing. Default is 4.
@@ -103,7 +103,7 @@ Options:
                         the number of cells in each sample. Default is 20.
 ```
 
-## Full parameters for ONTraC_GNN
+## Full Parameters for ONTraC_GNN
 
 ```
 Usage: ONTraC_GNN <--NN-dir NN_DIR> <--GNN-dir GNN_DIR> [--device DEVICE]
@@ -122,13 +122,13 @@ Options:
     --NN-dir=NN_DIR     Directory for niche network outputs.
     --GNN-dir=GNN_DIR   Directory for the GNN output.
     --preprocessing-dir=PREPROCESSING_DIR
-                        This options will be deprecated from v3.0. Please use --NN-dir instead.
+                        This option will be deprecated from v3.0. Please use --NN-dir instead.
 
   Options for GNN training:
     --device=DEVICE     Device for training. We support cpu and cuda now. Auto select if not specified.
     --epochs=EPOCHS     Number of maximum epochs for training. Default is 1000.
     --patience=PATIENCE
-                        Number of epochs wait for better result. Default is 100.
+                        Number of epochs to wait for better result. Default is 100.
     --min-delta=MIN_DELTA
                         Minimum delta for better result. Should be in (0, 1). Default is 0.001
     --min-epochs=MIN_EPOCHS
@@ -150,12 +150,12 @@ Options:
                         Weight for purity loss. Default is 300.
     --regularization-loss-weight=REGULARIZATION_LOSS_WEIGHT
                         Weight for regularization loss. Default is 0.1.
-    --beta=BETA         Beta value control niche cluster assignment matrix. Default is 0.03.
+    --beta=BETA         Beta value controls the niche cluster assignment matrix. Default is 0.03.
 ```
 
-## Full parameters for ONTraC_NT
+## Full Parameters for ONTraC_NT
 
-Previouly named as NicheTrajectory.
+Previously named `NicheTrajectory`.
 
 ```
 Usage: ONTraC_NT <--NN-dir NN_DIR> <--GNN-dir GNN_DIR> <--NT-dir NT_DIR> 
@@ -172,16 +172,16 @@ Options:
     --GNN-dir=GNN_DIR   Directory for the GNN output.
     --NT-dir=NT_DIR     Directory for the niche trajectory output.
     --preprocessing-dir=PREPROCESSING_DIR
-                        This options will be deprecated from v3.0. Please use --NN-dir instead.
+                        This option will be deprecated from v3.0. Please use --NN-dir instead.
     --NTScore-dir=NTSCORE_DIR
-                        This options will be deprecated from v3.0. Please use --NT-dir instead.
+                        This option will be deprecated from v3.0. Please use --NT-dir instead.
 
   Options for niche trajectory:
     --trajectory-construct=TRAJECTORY_CONSTRUCT
                         Method to construct the niche trajectory. Default is 'BF' (brute-force).
 ```
 
-## Full parameters for ONTraC_analysis
+## Full Parameters for ONTraC_analysis
 
 ```
 Usage: ONTraC_analysis [--NN-dir NN_DIR] [--GNN-dir GNN_DIR] [--NT-dir NT_DIR] [-o OUTPUT]
@@ -202,20 +202,20 @@ Options:
     -o OUTPUT, --output=OUTPUT
                         Directory for analysis output.
     --meta-input=META_INPUT
-                        Meta data file are no longer required for ONTraC analysis. This options will be deprecated from v2.0.
+                        Metadata file is no longer required for ONTraC analysis. This option will be deprecated from v2.0.
     -l LOG, --log=LOG   Log file.
     --preprocessing-dir=PREPROCESSING_DIR
-                        This options will be deprecated from v3.0. Please use --NN-dir instead.
+                        This option will be deprecated from v3.0. Please use --NN-dir instead.
     --NTScore-dir=NTSCORE_DIR
-                        This options will be deprecated from v3.0. Please use --NT-dir instead.
+                        This option will be deprecated from v3.0. Please use --NT-dir instead.
     -d DATASET, --dataset=DATASET
-                        This options will be deprecated from v3.0. Please use --meta-input instead.
+                        This option will be deprecated from v3.0. Please use --meta-input instead.
 
   Visualization options:
     -r, --reverse       Reverse the NT score during visualization.
     -s, --sample        Plot each sample separately.
     --scale-factor=SCALE_FACTOR
-                        Scale factor control the size of spatial-based plots.
+                        Scale factor controls the size of spatial-based plots.
 
   Suppress options:
     --suppress-cell-type-composition
@@ -227,9 +227,9 @@ Options:
                         Skip the niche trajectory related visualization.
 ```
 
-## Full parameters for ONTraC_GT
+## Full Parameters for ONTraC_GT
 
-Previouly named as ONTraC_GP.
+Previously named `ONTraC_GP`.
 
 ```
 Usage: ONTraC_GT <--NN-dir NN_DIR> <--GNN-dir GNN_DIR> <--NT-dir NT_DIR> [--device DEVICE]
@@ -249,15 +249,15 @@ Options:
     --GNN-dir=GNN_DIR   Directory for the GNN output.
     --NT-dir=NT_DIR     Directory for the niche trajectory output.
     --preprocessing-dir=PREPROCESSING_DIR
-                        This options will be deprecated from v3.0. Please use --NN-dir instead.
+                        This option will be deprecated from v3.0. Please use --NN-dir instead.
     --NTScore-dir=NTSCORE_DIR
-                        This options will be deprecated from v3.0. Please use --NT-dir instead.
+                        This option will be deprecated from v3.0. Please use --NT-dir instead.
 
   Options for GNN training:
     --device=DEVICE     Device for training. We support cpu and cuda now. Auto select if not specified.
     --epochs=EPOCHS     Number of maximum epochs for training. Default is 1000.
     --patience=PATIENCE
-                        Number of epochs wait for better result. Default is 100.
+                        Number of epochs to wait for better result. Default is 100.
     --min-delta=MIN_DELTA
                         Minimum delta for better result. Should be in (0, 1). Default is 0.001
     --min-epochs=MIN_EPOCHS
@@ -279,7 +279,7 @@ Options:
                         Weight for purity loss. Default is 300.
     --regularization-loss-weight=REGULARIZATION_LOSS_WEIGHT
                         Weight for regularization loss. Default is 0.1.
-    --beta=BETA         Beta value control niche cluster assignment matrix. Default is 0.03.
+    --beta=BETA         Beta value controls the niche cluster assignment matrix. Default is 0.03.
 
   Options for niche trajectory:
     --trajectory-construct=TRAJECTORY_CONSTRUCT

@@ -1,10 +1,10 @@
 # Installation and Setup
 
-This tutorial walks you through installing ONTraC (Ordered Niche Trajectory Construction) and confuguring your environment for spatial omics data analysis.
+This tutorial walks you through installing ONTraC (Ordered Niche Trajectory Construction) and configuring your environment for spatial omics data analysis.
 
 ## System Requirements
 
-ONTraC supports following systems:
+ONTraC supports the following systems:
 
 - Operating Systems: Linux, macOS, and Windows
 - Python Versions: 3.10, 3.11, and 3.12
@@ -63,7 +63,7 @@ conda create -y -n ONTraC python=3.11
 conda activate ONTraC
 ```
 
-#### Install Optional Dependencies for PyG (Only works on CUDA-capable GPU)
+#### Install Optional Dependencies for PyG (Only works on systems with a CUDA-capable GPU)
 
 ```bash
 pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.7.0+cu126.html
@@ -72,7 +72,7 @@ pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -
 # based on your CUDA version
 # or
 pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.7.0+cpu.html
-# for macOS and non-CUDA-capable GPU system
+# for macOS and non-CUDA-capable systems
 ```
 
 ### Step 2: Install ONTraC
@@ -91,13 +91,13 @@ For visualization capabilities:
 pip install "ONTraC[analysis]"
 ```
 
-For test capabilities:
+For testing capabilities:
 
 ```bash
 pip install "ONTraC[test]"
 ```
 
-For develop capabilities:
+For development capabilities:
 
 ```bash
 pip install "ONTraC[dev]"
@@ -111,7 +111,7 @@ pip install "ONTraC[all]"
 
 #### Option 2: Install the Development Version from GitHub
 
-For the latest developing version:
+For the latest development version:
 
 ```bash
 git clone git@github.com:gyuanlab/ONTraC.git .
@@ -121,7 +121,7 @@ pip install .
 pip install ".[analysis]"
 # Or with test capabilities:
 pip install ".[test]"
-# Or with develop capabilities:
+# Or with development capabilities:
 pip install ".[dev]"
 # Or with all capabilities:
 pip install ".[all]"

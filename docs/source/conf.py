@@ -131,7 +131,7 @@ nb_render_priority = {
     )
 }
 
-# -- Options for Autosummary, Autodoc, typehints, Napolean docstring format
+# -- Options for Autosummary, Autodoc, type hints, and Napoleon docstring format
 
 autosummary_generate = True
 autodoc_docstring_signature = True

@@ -4,15 +4,15 @@
 
 ### patience
 
-The training process will terminated if the model does not improve after the number of epochs set by this parameter.
+The training process will be terminated if the model does not improve after the number of epochs set by this parameter.
 
 ### min-delta
 
-The model will be considered improved if the total loss decreases by the propotion set by this parameter.
+The model will be considered improved if the total loss decreases by the proportion set by this parameter.
 
 ### hidden-feats
 
-The number of niche features after GCN processing (step2).
+The number of niche features after GCN processing (step 2).
 
 ### modularity-loss-weight
 

@@ -1,4 +1,4 @@
-# Welcome to ONTraC (Ordered Niche Trajectory Construction) website
+# Welcome to the ONTraC (Ordered Niche Trajectory Construction) Website
 
 <span>
   <a href="https://pypi.org/project/ONTraC/">
@@ -29,7 +29,7 @@ ONTraC differs from existing tools in that it treats a niche, rather than an ind
 
 ONTraC integrates niche features (cell-type composition) and spatial information using a graph neural network framework. Its output, the niche trajectory, represents a one-dimensional continuum of the tissue microenvironment. By disentangling cell-level and niche-level properties, niche trajectory analysis offers a coherent framework for studying coordinated cellular responses to continuous tissue microenvironment variations.
 
-ONTraC can give every cell from all samples a NT (niche trajectory) score to describe its position along the niche trajectory, which provide a uniform spatial trajectory across the whole dataset.
+ONTraC can assign every cell from all samples an NT (niche trajectory) score to describe its position along the niche trajectory, which provides a uniform spatial trajectory across the whole dataset.
 
 ```{image} ../source/images/other/logo_with_text_long.png
 :alt: ONTraC logo
@@ -43,7 +43,7 @@ ONTraC can give every cell from all samples a NT (niche trajectory) score to des
 
 ### Input File
 
-This file contains all input formation with five columns: Cell_ID, Sample, Cell_Type, x, and y.
+This file contains all input information with five columns: `Cell_ID`, `Sample`, `Cell_Type`, `x`, and `y`.
 
 | Cell_ID         | Sample   | Cell_Type | x       | y     |
 | --------------- | -------- | --------- | ------- | ----- |
@@ -69,7 +69,7 @@ ONTraC \
     --meta-input simulated_dataset.csv \
     --NN-dir simulation_NN \
     --GNN-dir simulation_GNN \
-    --NT-dir simulation_NT \  
+    --NT-dir simulation_NT \
     --hidden-feats 4 \
     -k 6 \
     --modularity-loss-weight 0.3 \
@@ -78,7 +78,7 @@ ONTraC \
     --beta 0.03 2>&1 | tee simulation.log
 ```
 
-- See the [Command Line Interface Tutorial](./tutorials/command_line.md) for using ONTraC via command line.
+- See the [Command Line Interface Tutorial](./tutorials/command_line.md) for using ONTraC from the command line.
 - For Jupyter-based usage, refer to the [Interactive Tutorial](./tutorials/interactive.ipynb).
 
 ### Visualization
@@ -101,7 +101,7 @@ This project is actively maintained and under active development.
 
 ## Citation
 
-**Wang, W.\*, Zheng, S.\*, Shin, C. S., Chávez-Fuentes J. C.  & [Yuan, G. C.](https://labs.icahn.mssm.edu/yuanlab/)$**. [ONTraC characterizes spatially continuous variations of tissue microenvironment through niche trajectory analysis.](https://doi.org/10.1186/s13059-025-03588-5) *Genome Biol*, 2025.
+**Wang, W.\*, Zheng, S.\*, Shin, C. S., Chávez-Fuentes J. C. & [Yuan, G. C.](https://labs.icahn.mssm.edu/yuanlab/)$**. [ONTraC characterizes spatially continuous variations of tissue microenvironment through niche trajectory analysis.](https://doi.org/10.1186/s13059-025-03588-5) *Genome Biol*, 2025.
 
 ## Other Resources
 

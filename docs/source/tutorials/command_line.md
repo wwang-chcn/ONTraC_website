@@ -11,7 +11,7 @@ kernelspec:
 
 # Using ONTraC via Command Line
 
-This document showing the step-by-step process of running OnTraC using Stereo-seq mouse midbrain dataset.
+This document shows the step-by-step process of running ONTraC using the Stereo-seq mouse midbrain dataset.
 
 ## Preparation
 
@@ -5445,7 +5445,7 @@ Done!
 :::
 
 ```{note}
-Please refer to the [Parameters Explanation](./parameters.md) for details about parameters used here.
+Please refer to the [Parameters Explanation](./parameters.md) for details about the parameters used here.
 ```
 
 ```{note}
@@ -5480,7 +5480,7 @@ ONTraC_analysis \
                         version: 1.2.0
 
 ##################################################################################
-19:54:56 --- WARNING: The --meta-input option is no longer required for ONTraC analysis. This options will be deprecated from v2.0.
+19:54:56 --- WARNING: The --meta-input option is no longer required for ONTraC analysis. This option will be deprecated from v2.0.
 19:54:56 --- INFO: Creating directory: analysis_output/simulation
 19:54:56 --- INFO: ------------------ RUN params memo ------------------ 
 19:54:56 --- INFO:             -------- I/O options -------             

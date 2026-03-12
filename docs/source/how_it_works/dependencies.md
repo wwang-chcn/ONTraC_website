@@ -6,8 +6,8 @@ ONTraC has several core dependencies that are automatically installed during the
 flowchart LR
 subgraph A["ONTraC Dependencies Structure"]
   subgraph B1["Core Dependencies"]
-    B11[Pytorch]
-    B12["PyTroch Geometric (PYG)"]
+    B11[PyTorch]
+    B12["PyTorch Geometric (PyG)"]
     B13(Pandas)
     B14(pyyaml)
     B15(scipy)

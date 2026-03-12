@@ -11,11 +11,11 @@ kernelspec:
 
 # Niche clusters
 
-`ONTraC` (Ordered Niche Trajectory Construction) is a niche-centered, machine learning method for constructing spatially continuous trajectories. ONTraC differs from existing tools in that it treats a niche, rather than an individual cell, as the basic unit for spatial trajectory analysis. In this context, we define niche as a multicellular, spatially localized region where different cell types may coexist and interact with each other. ONTraC seamlessly integrates cell-type composition and spatial information by using the graph neural network modeling framework.
+`ONTraC` (Ordered Niche Trajectory Construction) is a niche-centered machine learning method for constructing spatially continuous trajectories. ONTraC differs from existing tools by treating a niche, rather than an individual cell, as the basic unit for spatial trajectory analysis. In this context, a niche is defined as a multicellular, spatially localized region where different cell types may coexist and interact. ONTraC seamlessly integrates cell-type composition and spatial information using a graph neural network framework.
 
-ONTraC generate `niche cluster` an assignment matrix as an intermediate result. It is possible for users to utilise the niche cluster information as spatial domains or other downstreaming analysis. The following section outlines the process for running `ONTraC` on stereo-seq data and visualising which niche cluster each cell belongs to.
+ONTraC generates a `niche cluster` assignment matrix as an intermediate result. Users can use niche cluster information as spatial domains for downstream analysis. The following section outlines the process for running `ONTraC` on stereo-seq data and visualizing which niche cluster each cell belongs to.
 
-## prepare
+## Prepare
 
 ### Install required packages and ONTraC
 
@@ -29,7 +29,7 @@ Please see the [Installation Tutorial](../installation.md)
 ONTraC --meta-input data/stereo_seq_brain/original_data.csv --NN-dir output/stereo_seq_NN --GNN-dir output/stereo_seq_GNN --NT-dir output/stereo_seq_NT --device cuda -s 42 --lr 0.03 --hidden-feats 4 -k 6 --modularity-loss-weight 0.3 --regularization-loss-weight 0.1 --purity-loss-weight 300 --beta 0.03 2>&1 | tee log/stereo_seq.log
 ```
 
-The input dataset and output files could be downloaded from [Zenodo](https://zenodo.org/records/11186620).
+The input dataset and output files can be downloaded from [Zenodo](https://zenodo.org/records/11186620).
 
 ## Visualization
 
@@ -60,7 +60,7 @@ import seaborn as sns
 from ONTraC.analysis.data import AnaData
 ```
 
-### Plotting preprare
+### Plotting preparation
 
 ```{code-cell}
 :class: input-cell
@@ -73,7 +73,7 @@ options.GNN_dir = 'stereo_seq_GNN'
 options.NT_dir = 'stereo_seq_NT'
 options.log = 'stereo_seq_final.log'
 options.reverse = True  # Set it to False if you don't want reverse NT score
-options.output = None  # We save the output figure by our self here
+options.output = None  # We save the output figure ourselves here
 ana_data = AnaData(options)
 ```
 
@@ -156,7 +156,7 @@ fig.savefig('figures/cell_type_composition_in_niche_clusters.png', dpi=300)
 ```
 
 ![cell_type_dis_in_niche_clusters_image](../images/visualizations/cell_type_dis_in_niche_clusters.png)
-This heatmap show the cell type composition within each niche cluster. Sum of each row equals to 1.
+This heatmap shows the cell type composition within each niche cluster. The sum of each row equals 1.
 
 #### Cell type distribution across niche clusters
 
@@ -170,7 +170,7 @@ fig.savefig('figures/cell_type_dis_across_niche_cluster.png', dpi=300)
 ```
 
 ![cell_type_dis_across_niche_clusters_image](../images/visualizations/cell_type_dis_across_niche_clusters.png)
-This heatmap show the cell type distribution across niche clusters. Sum of each column equals to 1.
+This heatmap shows the cell type distribution across niche clusters. The sum of each column equals 1.
 
 ### Spatial niche-level NT score distribution
 

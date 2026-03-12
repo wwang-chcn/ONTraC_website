@@ -1,11 +1,11 @@
-# Input and output files description
+# Input and Output Files Description
 
 ## Input files
 
-### meta data file
+### Metadata file
 
-A example meta data file `stereo_input.csv` is provided in [Zenodo Dataset repository](https://zenodo.org/records/15571644/files/Stereo_seq_data.zip) under `preprocessing` directory.
-The meta data file looks like the following:
+An example metadata file, `stereo_input.csv`, is provided in the [Zenodo dataset repository](https://zenodo.org/records/15571644/files/Stereo_seq_data.zip) under the `preprocessing` directory.
+The metadata file looks like the following:
 
 | Cell_ID         | Sample   | Cell_Type | x       | y     |
 | --------------- | -------- | --------- | ------- | ----- |
@@ -21,7 +21,7 @@ The meta data file looks like the following:
 
 - Sample
 
-  The name of sample which each cell belongs to.
+  The sample name to which each cell belongs.
 
 - Cell_Type
 
@@ -42,15 +42,15 @@ The meta data file looks like the following:
 
 ## Output files
 
-A example output is provided in [Zenodo Dataset repository](https://zenodo.org/records/15571644/files/Stereo_seq_data.zip) under `ONTraC_output` directory.
+An example output is provided in the [Zenodo dataset repository](https://zenodo.org/records/15571644/files/Stereo_seq_data.zip) under the `ONTraC_output` directory.
 
 ### NN-dir
 
-Previouly named as preprocessing-dir.
+Previously named `preprocessing-dir`.
 
 - meta_data.csv.gz
 
-  Processed meta data file.
+  Processed metadata file.
 
 - samples.yaml
 
@@ -82,7 +82,7 @@ Previouly named as preprocessing-dir.
 
 - spotxcelltype.csv.gz
 
-  Deconvolution methods outputed cell type composition for each spot.
+  Cell type composition for each spot output by deconvolution methods.
   This file doesn't exist when using cell level dataset as input.
 
 ### GNN-dir
@@ -105,7 +105,7 @@ Previouly named as preprocessing-dir.
 
 - niche_hidden_features.csv.gz
 
-  File contains the tranined embeddings of each niche.
+  File contains the trained embeddings of each niche.
 
 - {sample name}_out.csv.gz
 
@@ -113,7 +113,7 @@ Previouly named as preprocessing-dir.
 
 - {sample name}_out_adj.csv.gz
 
-  Files contain the adjancy information between niche clusters in each sample.
+  Files contain the adjacency information between niche clusters in each sample.
 
 - {sample name}_s.csv.gz
 
@@ -129,23 +129,23 @@ Previouly named as preprocessing-dir.
 
 - consolidate_out_adj.csv.gz
 
-  File contains the adjancy information between niche clusters.
+  File contains the adjacency information between niche clusters.
 
 - model_state_dict.pt
 
-  File contains the trained parameters for model.
+  File contains the trained parameters for the model.
 
 - epoch_0.pt
 
-  File contains the initial parameters for model.
+  File contains the initial parameters for the model.
 
 - epoch_X.pt
 
-  File contains the intermediate parameters for model.
+  File contains the intermediate parameters for the model.
 
 ### NT-dir
 
-Previouly named as NTScore-dir.
+Previously named `NTScore-dir`.
 
 - {sample name}_NTScore.csv.gz
 

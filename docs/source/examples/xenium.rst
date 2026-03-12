@@ -4,11 +4,11 @@ Running ONTraC on a Xenium dataset
 Download the data
 ------------------
 
-The human breast cancer Xenium dataset originally published by `Janesick, et al. <https://www.nature.com/articles/s41467-023-43458-x>`_ 
-is available at `10X genomics <https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast>`_  
+The human breast cancer Xenium dataset originally published by `Janesick, et al. <https://www.nature.com/articles/s41467-023-43458-x>`_
+is available at `10x Genomics <https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast>`_.
 
-For running this example, download the In Situ Sample 1, Replicate 1 
-(Xenium_FFPE_Human_Breast_Cancer_Rep1_outs.zip) and the `Cell_Barcode_Type_Matrices.xlsx file <https://cdn.10xgenomics.com/raw/upload/v1695234604/Xenium%20Preview%20Data/Cell_Barcode_Type_Matrices.xlsx>`_  
+To run this example, download In Situ Sample 1, Replicate 1
+(`Xenium_FFPE_Human_Breast_Cancer_Rep1_outs.zip`) and the `Cell_Barcode_Type_Matrices.xlsx file <https://cdn.10xgenomics.com/raw/upload/v1695234604/Xenium%20Preview%20Data/Cell_Barcode_Type_Matrices.xlsx>`_.
 
 
 Data preparation
@@ -103,7 +103,7 @@ ONTraC will run on CPU if CUDA is not available.
 Results visualization
 ---------------------
 
-Please see the :doc:`../tutorials/visualization` tutorials for details.
+Please see the :doc:`../tutorials/visualization` tutorial for details.
 
 - Create all the plots with the ONTraC_analysis command.
 
@@ -118,4 +118,3 @@ Please see the :doc:`../tutorials/visualization` tutorials for details.
 .. image:: ../images/xenium/cell_NT_score.png
   :width: 700
   :alt: Cell level NT score
-

@@ -1,4 +1,4 @@
 # How it works
 
-- [concepts_terminology](./concepts_terminology.md)
-- [dependencies](./dependencies.md)
+- [Concepts and terminology](./concepts_terminology.md)
+- [Dependencies](./dependencies.md)
